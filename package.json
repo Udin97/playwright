@@ -1,0 +1,28 @@
+{
+  "name": "bibd-at-v1",
+  "version": "1.0.0",
+  "description": "Playwright automation suite for BIBD AT V1",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test; code=$?; node scripts/save-report.js; exit $code",
+    "test:e2e": "playwright test tests/e2e; code=$?; node scripts/save-report.js; exit $code",
+    "test:api": "playwright test tests/api; code=$?; node scripts/save-report.js; exit $code",
+    "test:smoke": "playwright test tests/smoke; code=$?; node scripts/save-report.js; exit $code",
+    "test:headed": "playwright test --headed; code=$?; node scripts/save-report.js; exit $code",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report reports/html",
+    "codegen": "playwright codegen"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "oracledb": "^6.5.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "typescript": "^5.5.4"
+  }
+}

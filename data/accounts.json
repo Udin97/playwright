@@ -1,0 +1,12 @@
+{
+  "savingsAccount": {
+    "accountNumber": "0011234567890",
+    "accountType": "CASA",
+    "currency": "BND"
+  },
+  "currentAccount": {
+    "accountNumber": "0019876543210",
+    "accountType": "CASA",
+    "currency": "BND"
+  }
+}

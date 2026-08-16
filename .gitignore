@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Reports (auto-generated)
+reports/html/
+reports/screenshots/
+
+# Environment
+.env
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store

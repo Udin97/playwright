@@ -6,8 +6,8 @@ export const selectors = {
     errorMessage: '[data-test="error"]',
   },
   dashboard: {
-    welcomeBanner: '[data-testid="welcome-banner"]',
-    navMenu: '[data-testid="nav-menu"]',
+    welcomeBanner: '[data-test="title"]',
+    navMenu: '#react-burger-menu-btn',
   },
   cif: {
     searchInput: '[data-testid="cif-search"]',
@@ -18,5 +18,18 @@ export const selectors = {
     toAccountInput: '[data-testid="to-account"]',
     amountInput: '[data-testid="amount"]',
     submitButton: '[data-testid="transfer-submit"]',
+  },
+  addToCart: {
+    addToCartButton: '[data-test="add-to-cart-sauce-labs-backpack"]',
+    removeCartButton: '[data-test="remove-sauce-labs-backpack"]',
+  },
+  cart: {
+    badge: '.shopping_cart_badge',
+  },
+  checkout: {
+    checkoutButton: '[data-test="checkout"]',
+  },
+  continueShopping: {
+    continueShoppingButton: '[data-test="continue-shopping"]',
   },
 };

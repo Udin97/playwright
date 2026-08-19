@@ -1,6 +1,7 @@
 import { Page } from '@playwright/test';
 import { BasePage } from './BasePage';
 import { selectors } from '../config/selectors';
+import { env } from '../config/env';
 
 export class LoginPage extends BasePage {
   constructor(page: Page) {
@@ -8,7 +9,7 @@ export class LoginPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/');
+    await this.goto(env.baseUrl);
   }
 
   async login(username: string, password: string) {

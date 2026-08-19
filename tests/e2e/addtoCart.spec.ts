@@ -34,7 +34,7 @@ test.describe('E2E: Checkout', () => {
     await addToCartPage.cartbadge();
     await addToCartPage.screenshot('checkout_after-open-cart');
 
-    await addToCartPage.cheoutbutton();
+    await addToCartPage.checkoutbutton();
     await addToCartPage.screenshot('checkout_after-checkout-click');
   });
 });
@@ -66,5 +66,27 @@ test.describe('E2E: Continue Shopping', () => {
 
     await addToCartPage.continueShopping();
     await addToCartPage.screenshot('continue-shopping_after-continue-shopping-click');
+  });
+  });
+
+  test.describe('E2E: Complete Checkout', () => {
+  test('Click on Continue Shopping button', async ({ authenticatedPage }) => {
+    const addToCartPage = new AddToCartPage(authenticatedPage.page);
+    await addToCartPage.addToCart();
+    await expect(authenticatedPage.page.locator('.shopping_cart_badge')).toHaveText('1');
+
+    await addToCartPage.screenshot('continue-shopping_after-add');
+    await addToCartPage.clickcart();
+    //await addToCartPage.screenshot('continue-shopping_after-open-cart');
+    await addToCartPage.screenshot('continue-shopping_after-continue-shopping-click');
+    await addToCartPage.checkoutbutton();
+    await addToCartPage.screenshot('continue-shopping_after-checkout-click');
+    await addToCartPage.fillform('testuser', 'user', '12345');
+    await addToCartPage.screenshot('fill-form');
+    await addToCartPage.continuebutton();
+    await addToCartPage.screenshot('continue-button-click');
+    await addToCartPage.finishbutton();
+    await addToCartPage.screenshot('finish-button-click');
+ 
   });
   });

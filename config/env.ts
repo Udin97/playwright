@@ -4,7 +4,7 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 export const env = {
-  baseUrl: process.env.BASE_URL ?? 'http://localhost:3000',
+  baseUrl: process.env.BASE_URL ?? 'https://www.saucedemo.com/',
   apiBaseUrl: process.env.API_BASE_URL ?? 'http://localhost:3000/api',
   username: process.env.TEST_USERNAME ?? '',
   password: process.env.TEST_PASSWORD ?? '',

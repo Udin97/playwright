@@ -8,5 +8,10 @@
     "accountNumber": "0019876543210",
     "accountType": "CASA",
     "currency": "BND"
+  },
+  "youinfoinput": {
+    "firstNameInput": "testuser",
+    "lastNameInput": "user",
+    "zipCodeInput": "12345"
   }
 }
